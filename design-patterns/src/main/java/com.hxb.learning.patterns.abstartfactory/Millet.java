@@ -1,3 +1,5 @@
+package com.hxb.learning.patterns.abstartfactory;
+
 public class Millet implements FoodStuff{
 
     @Override

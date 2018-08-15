@@ -1,4 +1,6 @@
-public class ConcreteFactory extends AbStractFactory{
+package com.hxb.learning.patterns.abstartfactory;
+
+public class ConcreteFactory extends AbStractFactory {
     @Override
     public FoodStuff produceRice() {
         return new Rice();
