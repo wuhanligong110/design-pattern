@@ -1,3 +1,5 @@
+package com.hxb.learning.patterns.singleton;
+
 public class LazySingletonThree {
 
     private LazySingletonThree(){}

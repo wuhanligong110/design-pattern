@@ -1,3 +1,5 @@
+package com.hxb.learning.patterns.singleton;
+
 /**
  * 懒汉模式
  */

@@ -1,3 +1,5 @@
+package com.hxb.learning.patterns.singleton;
+
 import java.io.Serializable;
 
 public class Seriable implements Serializable{
