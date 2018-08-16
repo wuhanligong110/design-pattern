@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/design-patterns/design-patterns.iml" filepath="$PROJECT_DIR$/design-patterns/design-patterns.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/distribute-learning.iml" filepath="$PROJECT_DIR$/.idea/distribute-learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rmi/rmi.iml" filepath="$PROJECT_DIR$/rmi/rmi.iml" />
     </modules>
   </component>
 </project>
