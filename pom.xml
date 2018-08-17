@@ -12,6 +12,7 @@
     <modules>
         <module>design-patterns</module>
         <module>rmi</module>
+        <module>zookeeper</module>
     </modules>
 
     <build>
