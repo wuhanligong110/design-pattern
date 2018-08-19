@@ -1,5 +1,6 @@
 package com.hxb.learning.rmi.client.rpc;
 
+import com.hxb.learning.rmi.client.rpc.zk.IServiceDiscovery;
 import com.hxb.learning.rmi.server.rpc.RpcRequest;
 
 import java.lang.reflect.InvocationHandler;
@@ -7,12 +8,13 @@ import java.lang.reflect.Method;
 
 public class RemoteInvocationHandler implements InvocationHandler {
 
-    private String host;
-    private int port;
+    private IServiceDiscovery serviceDiscovery;
 
-    public RemoteInvocationHandler(String host, int port) {
-        this.host = host;
-        this.port = port;
+    private String version;
+
+    public RemoteInvocationHandler(IServiceDiscovery serviceDiscovery, String version) {
+        this.serviceDiscovery = serviceDiscovery;
+        this.version = version;
     }
 
     @Override
@@ -21,7 +23,9 @@ public class RemoteInvocationHandler implements InvocationHandler {
         request.setClassName(method.getDeclaringClass().getName());
         request.setMethodName(method.getName());
         request.setParameters(args);
-        TCPTransport tcpTransport = new TCPTransport(this.host,this.port);
+        request.setVersion(version);
+        String serviceAddress=serviceDiscovery.discover(request.getClassName());
+        TCPTransport tcpTransport = new TCPTransport(serviceAddress);
         return tcpTransport.send(request);
     }
 }

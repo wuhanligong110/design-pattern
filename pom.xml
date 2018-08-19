@@ -13,6 +13,7 @@
         <module>design-patterns</module>
         <module>rmi</module>
         <module>zookeeper</module>
+        <module>distribute-lock</module>
     </modules>
 
     <build>
